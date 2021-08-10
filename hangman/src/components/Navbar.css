@@ -1,0 +1,8 @@
+#navigationbar {
+    margin-bottom: 70px;
+}
+
+#googleLogin, #googleLogout {
+    padding-left: 10px;
+    right: 0px;
+}

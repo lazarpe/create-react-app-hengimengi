@@ -1,0 +1,22 @@
+.Hangman {
+  margin-top: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#magicWord > p {
+  color: rgb(132, 0, 185);
+}
+
+#hintBtn > button {
+  margin-bottom: 10px;
+}
+
+#resetBtn > button {
+  margin-bottom: 10px;
+}
