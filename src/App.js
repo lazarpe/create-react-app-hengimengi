@@ -1,50 +1,27 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
+import Hangman from "./components/Hangman";
+import Footer from "./components/Footer";
+import Settings from "./components/Settings.js";
+import Navigation from "./components/Navbar";
+import { ThemeProvider } from "react-bootstrap";
 
-  handleClick = api => e => {
-    e.preventDefault()
+class App extends React.Component {
 
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
-}
-
-class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
+        <Navigation />
+        <Switch>
+          <Route path="/settings" component={Settings} />
+        </Switch>
+        <Hangman startCount="50" />
+        {/* <Leaderboard /> */}
+        <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
