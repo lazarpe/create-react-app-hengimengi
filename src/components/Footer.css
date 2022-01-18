@@ -1,8 +1,11 @@
 footer {
-  position: absolute;
-  bottom: 10;
+  display: block;
+  bottom: 0;
   width: 100%;
   font-family: "Courier New", Courier, monospace;
   background-color: lightgrey;
   margin-top: auto;
+  clear: both;
+  position: relative;
+  margin-top: 620px;
 }

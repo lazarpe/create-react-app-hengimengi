@@ -195,9 +195,15 @@ class Hangman extends Component {
               Reset
             </button>
           </div>
-          <div id="userdata">
+          {/* <div id="userdata">
             <p id="profiledata"></p>
-          </div>
+          </div> */}
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://leaderboard.davidemarcoli.de"
+          ></iframe>
+          <br></br>
         </div>
       </div>
     );

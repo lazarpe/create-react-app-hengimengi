@@ -15,7 +15,7 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/settings">Settings</Nav.Link>
+              {/*<Nav.Link href="/settings">Settings</Nav.Link>*/}
               <div id="googleLogin" align="right">
                 <Login />
               </div>
